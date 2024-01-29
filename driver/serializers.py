@@ -1,13 +1,13 @@
 from rest_framework import serializers
 from .models import *
+from users.models import CustomUser
 
-
-class CarCategorySerializer(serializers.Serializer):
+class CarCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = CarCategory
         fields = '__all__'
 
-class DriverSerializer(serializers.Serializer):
+class CustomDriverSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Driver
-        fields = '__all__'
+        model = CustomUser
+        fields = ["username"]

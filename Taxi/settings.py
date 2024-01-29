@@ -59,6 +59,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Taxi.urls'
 
+ASGI_APPLICATION = "Taksi.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": 'channels.layers.InMemoryChannelLayer'
+    }
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
