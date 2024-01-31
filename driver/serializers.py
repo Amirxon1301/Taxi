@@ -7,6 +7,11 @@ class CarCategorySerializer(serializers.ModelSerializer):
         model = CarCategory
         fields = '__all__'
 
+class DriverSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Driver
+        fields = '__all__'
+
 class CustomDriverSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
